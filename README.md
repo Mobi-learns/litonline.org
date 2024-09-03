@@ -1,21 +1,23 @@
+
 LIT Scholarship Application
-Overview
 
-The LIT Scholarship Application is a web-based platform designed to manage and present scholarship information efficiently. This application is built using Flask for the backend and utilizes Apache for web hosting. The system is containerized using Docker and can be deployed on various environments.
-Features
+## Overview
 
-    Home Page: Displays an overview and welcome message.
-    About Page: Information about the scholarship program.
-    Apply Page: Allows users to submit applications.
-    Contact Page: Provides a form for users to get in touch.
-    Scholarships Page: Lists available scholarships with detailed descriptions.
+The LIT Scholarship Application is a web-based platform designed to manage and present scholarship information efficiently. This application is built using Flask for the backend and utilizes Apache for web hosting. The system is containerized using Docker and can be deployed on various environments. 
 
-Project Structure
+## Features
+
+- **Home Page**: Displays an overview and welcome message.
+- **About Page**: Information about the scholarship program.
+- **Apply Page**: Allows users to submit applications.
+- **Contact Page**: Provides a form for users to get in touch.
+- **Scholarships Page**: Lists available scholarships with detailed descriptions.
+
+## Project Structure
 
 The project directory is organized as follows:
 
-php
-Copy code
+```
 /var/www/html/
 ├── __pycache__               # Compiled Python files
 ├── index.html                # Static HTML file for the homepage
@@ -36,83 +38,87 @@ Copy code
     │       ├── index.html    # HTML template for the Home page
     │       └── scholarships.html # HTML template for the Scholarships page
     └── requirements.txt       # List of Python dependencies
+```
 
-Installation
-Prerequisites
+## Installation
 
-    Python 3.10
-    Apache2
-    Docker and Docker Compose (for containerization)
+### Prerequisites
 
-Setup
+- Python 3.10
+- Apache2
+- Docker and Docker Compose (for containerization)
 
-    Clone the Repository:
+### Setup
 
-    bash
-    Copy code
-    git clone https://github.com/Mobi-learns/litonline.org.git
-    cd litonline.org
+1. **Clone the Repository:**
 
-    Install Dependencies:
+   ```bash
+   git clone https://github.com/Mobi-learns/litonline.org.git
+   cd litonline.org
+   ```
 
-    Make sure you have the required Python packages:
+2. **Install Dependencies:**
 
-    bash
-    Copy code
-    pip install -r requirements.txt
+   Make sure you have the required Python packages:
 
-    Configure Apache:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-    Ensure the Apache configuration is set up to use WSGI and SSL. Update your /etc/apache2/sites-available/litonline.conf and /etc/apache2/sites-available/litonline-le-ssl.conf files accordingly.
+3. **Configure Apache:**
 
-    Set Up Docker (Optional):
+   Ensure the Apache configuration is set up to use WSGI and SSL. Update your `/etc/apache2/sites-available/litonline.conf` and `/etc/apache2/sites-available/litonline-le-ssl.conf` files accordingly.
 
-    Build and run the Docker container:
+4. **Set Up Docker (Optional):**
 
-    bash
-    Copy code
-    sudo docker build -t litonline-app .
-    sudo docker run -d -p 80:80 litonline-app
+   Build and run the Docker container:
 
-    Configure SSL (Optional):
+   ```bash
+   sudo docker build -t litonline-app .
+   sudo docker run -d -p 80:80 litonline-app
+   ```
 
-    Follow the steps to obtain and configure an SSL certificate using Certbot:
+5. **Configure SSL (Optional):**
 
-    bash
-    Copy code
-    sudo certbot --apache -d www.litonline.org
+   Follow the steps to obtain and configure an SSL certificate using Certbot:
 
-Usage
+   ```bash
+   sudo certbot --apache -d www.litonline.org
+   ```
 
-    Run the Flask Application:
+## Usage
 
-    If not using Docker, start the Flask application using WSGI:
+1. **Run the Flask Application:**
 
-    bash
-    Copy code
-    sudo service apache2 restart
+   If not using Docker, start the Flask application using WSGI:
 
-    Access the Application:
+   ```bash
+   sudo service apache2 restart
+   ```
 
-    Open your web browser and navigate to http://www.litonline.org or https://www.litonline.org if SSL is configured.
+2. **Access the Application:**
 
-Contributing
+   Open your web browser and navigate to `http://www.litonline.org` or `https://www.litonline.org` if SSL is configured.
+
+## Contributing
 
 We welcome contributions to improve the LIT Scholarship Application. Please follow these guidelines:
 
-    Fork the Repository:
-    Create a Feature Branch:
-    Commit Your Changes:
-    Push to the Branch:
-    Open a Pull Request:
+1. **Fork the Repository:**
+2. **Create a Feature Branch:**
+3. **Commit Your Changes:**
+4. **Push to the Branch:**
+5. **Open a Pull Request:**
 
-For detailed instructions, please refer to our CONTRIBUTING.md file.
-License
+For detailed instructions, please refer to our [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-Contact
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
 
 For any queries or support, please reach out to:
 
-    Project Maintainer: Your Name
-    GitHub Repository: https://github.com/Mobi-learns/litonline.org
+- **Project Maintainer:** [Mobashshir Alam](mailto:m.alam@mergerequest.io)
+- **GitHub Repository:** [https://github.com/Mobi-learns/litonline.org](https://github.com/Mobi-learns/litonline.org)
