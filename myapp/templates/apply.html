@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Apply - Lead Ignite Transform</title>
+</head>
+<body>
+    <header>
+        <h1>Lead Ignite Transform</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/scholarships">Scholarships</a></li>
+                <li><a href="/apply">Apply</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Apply for a Scholarship</h2>
+        <form action="/apply" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="scholarship">Select Scholarship:</label><br>
+            <select id="scholarship" name="scholarship">
+                <option value="scholarship_a">Scholarship A</option>
+                <option value="scholarship_b">Scholarship B</option>
+                <option value="scholarship_c">Scholarship C</option>
+            </select><br><br>
+            <input type="submit" value="Apply">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Lead Ignite Transform. All rights reserved.</p>
+    </footer>
+</body>
+</html>
